@@ -1,0 +1,32 @@
+Id;Vegetasjonstype;Forklaring;Forklaring_eng
+1;granskog (dominerende), uten buskskikt (busker/sm<e5>tr<e6>r < 2m);Granskog uten buskskikt;Spruce (dominant) without bush covering
+2;granskog (dom.) med buskskikt;Granskog med buskskikt;Spruce (dominant) with bush covering
+3;furuskog (dom.) uten buskskikt;Furuskog uten buskskikt;Pine forest (dominant) without bush covering
+4;furuskog (dom.) med buskskikt;Furuskog med buskskikt;Pine forest (dominant) with bush covering
+5;l<f8>vskog (dom.) uten buskskikt;L<f8>vskog uten buskskikt;Deciduous (dominant) without bush covering
+6;l<f8>vskog (dom.) med buskskikt;L<f8>vskog med buskskikt;Deciduous (dominant) with bush covering
+7;blandingsskog (ca like mye l<f8>v og barskog) uten buskskikt;Blandingsskog (l<f8>v og bar) uten buskskikt;Mixed forest (approximately equal amount of deciduous and conifer) without bush covering
+8;som 7 med buskskikt;Blandingsskog (l<f8>v og bar) med buskskikt;Mixed forest (approximately equal amount of deciduous and conifer) with bush covering
+9;kratt med l<f8>vfellende busker og tr<e6>r (lavere enn 5m);Kratt med l<f8>vfellende busker og tr<e6>r (< 5m);Scrub with deciduous shrubs and trees (<5m)
+10;kratt med einerbusker og bartr<e6>r (< 5m);Kratt med einerbusker og bartr<e6>r (< 5m);Scrub with juniper shrubs and conifers (<5m)
+11;hogstfelt;Hogstfelt;Felled area
+12;furumyr (torvmyr med furu;;
+13;<e5>pen myr under skoggrensa;<c5>pen myr under skoggrensa;Open marsh below the tree line
+14;strandeng;Strandeng;Salt marsh
+15;dyrka mark;Dyrka mark;Cultivated land
+16;beitemark i bruk av husdyr, uten eller med sv<e6>rt f<e5> busker/tr<e6>r;Beitemark uten eller med f<e5> busker/tr<e6>r;Pastures in use with or without a few shrubs/trees
+17;som 16 men med spredte busker og tr<e6>r;Beitemark med spredte busker og tr<e6>r;Pastures in use with scattered shrubs and trees
+18;landlig bosetting (hus, g<e5>rdstun, hager);Landlig bosetting (hus, g<e5>rdstun, hager);Rural settlements (houses, farmyards, gardens)
+19;park;Park;Parkland
+20;byomr<e5>der;Byomr<e5>der;Urban areas
+21;fjellbj<f8>rkeskog;Fjellbj<f8>rkeskog;Mountain Birch forest
+22;fjell lavalpin (regnes vanligvis som beltet over skoggrensen til og med de <f8>verste sammenhengende bl<e5>b<e6>rheier);Lavalpint fjell;Low alpine mountainous (from the tree line to the upper continuous blueberry heathland)
+23;fjell mellomalpin (over lavalpin, myrdannelsen er slutt, men fortsatt sammenhengende vegetasjon);Mellomalpint fjell;Mid alpine mountain (from upper continuous blueberry heathland to where plant cover becomes patchy)
+24;fjell h<f8>yalpin (<f8>verste sone med isbreer, ur, steinblokker og fler<e5>rige sn<f8>fonner. Plantedekke spredt/usammenhengende) ;H<f8>yalpint fjell;High alpine mountain (mountains dominated by rock, scree, ice and only thinly spread plant cover)
+25;kystlynghei;Kystlynghei;Coastal heathland
+26;annet (Merk a, b osv og skriv nedenfor hva slags habitat);Annet;Other (specify type in the notes field for internet reporting).
+27;blanding av ovenst<e5>ende habitater hvis du ikke klarer <e5> oppgi blandingsforholdet godt nok med de tre prosenttallene ;Blanding av naturtyper;Mixture of natural habitats (give more details in the notes field for internet reporting).
+28;ferskvann;Ferskvann;Freshwater
+29;sj<f8>;Sj<f8>;Sea
+30;Steinur i lavland;Steinur i lavlandet;Lowland scree
+31;Veg, pareringsplass, steinbrudd, travbane og lignende;Veg, parklass, steinbrudd, travbane ol.;Road, parking area, quarry, racecourse, etc.
