@@ -97,7 +97,7 @@ list(
     modelSettings,
     list(thin = 1,
     samples = 50,
-    nChains = 1,
+    nChains = 3,
     transient = 50)
   ),
   tar_target(

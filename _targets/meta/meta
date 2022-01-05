@@ -18,15 +18,11 @@ Y_obs|stem|47e49729dc6c2aca|b0da9b2563afbccf|215f04f7b770a0a5|57341179||t18997.6
 variableStr|stem|684e8292224fe94c|48990834236cfeae|15d79ad1d2e84b42|-1716667730||t18997.6622389213s|ad5ee842a2d9dc4f|7037|rds|vector|||3.53|package ape was built under R version 4.0.5|
 trait_mod|stem|87452d51cad7aa65|998166431f0ce203|a82a4aef49d71684|-1002112680||t18997.6703995626s|2b17632ddec8e25c|1133|rds|vector|||3.01|package ape was built under R version 4.0.5|
 poiss_mod_str|stem|0893bbd956bac697|6e8a76bfaa94cc73|3bfd8e387a794b17|-2069345628||t18997.6720258803s|5b9cdef32f8b3e03|199312|rds|vector|||3.06|package ape was built under R version 4.0.5|
-modelSettings|stem|a8bd2680a0340f57|ec6ddd0790cb91f3|8fb75deda0f036e8|450273915||t18997.6754751127s|f8bbd7509a1a3d6d|123|rds|vector|||3.55|package ape was built under R version 4.0.5|
-mod_HMSC|stem|be1093d797606263|465dbc36e5fdd5a0|a010d55bc5fa3506|1035815180||t18997.6786842178s|c37b9c3f160b6eee|1891523|rds|vector|||132.41|package ape was built under R version 4.0.5|
-model_diagnostics|stem|251c0487fdd7dc4f|3bc9d35da12ead78|eea026892b741067|-2086566065||t18997.6877144195s|10da61cba4cac40f|44|rds|vector|||6.55|package ape was built under R version 4.0.5|
-postBeta|stem|2a70bc06df9f89e4|6896a6dd6a20ce60|93d191cfccdeef4b|2063578046||t18997.7191550496s|720388990957b3b3|2569|rds|vector|||3.13|package ape was built under R version 4.0.5|
-postGamma|stem|df2621b526db9bf0|78427a3b7fd46c62|93d191cfccdeef4b|-963105838||t18997.7191552458s|231dfa2cd0115b89|745|rds|vector|||0||
 joint_habitat_2_points|function|5b5902617d70352a||||||||||||||
 make_studyDesign|function|029f536d5c9001a9||||||||||||||
 poissMod|function|8f189084b6ca6c24||||||||||||||
 run_HMSC|function|3ee1485040875e6d||||||||||||||
+modelOut|function|7b2f115eb506cfb4||||||||||||||
 make_traits_df|function|90d0f34c2fa8e406||||||||||||||
 make_variables|function|b9969d5997e5af10||||||||||||||
 Pivot_data|function|3934b1daa6601c81||||||||||||||
@@ -36,5 +32,10 @@ check_model|function|e699b651d36f0fa0||||||||||||||
 make_covariates|function|e8fdaec70ecc4697||||||||||||||
 make_formulas|function|063aedcd2d3108a6||||||||||||||
 make_Y|function|4a27ca9a3857a3a9||||||||||||||
-plotBeta|stem|05dab02856d2e042|eaded2eb6264dc54|6cbceb2f79188c9d|-1855377699||t18997.7222017327s|719dcb1980e2798c|673|rds|vector|||3.04|package ape was built under R version 4.0.5|
-plotGamma|stem|703421f4386e62f9|23bec0e4df68262c|1713cff760173122|-1751655515||t18997.722201952s|589f299dfb36ce9f|677|rds|vector|||0||
+modelSettings|stem|64ca292504c2ac78|ae9ad7de3c3955fa|8fb75deda0f036e8|450273915||t18997.7242042627s|18d1d8c65487954c|124|rds|vector|||2.84|package ape was built under R version 4.0.5|
+mod_HMSC|stem|6cc61e20a168fec8|465dbc36e5fdd5a0|f4776086bcbed756|1035815180||t18997.7261378191s|dabb4452fe4ba653|5757636|rds|vector|||166.57||
+postBeta|stem|d16d72eb256abdb0|6896a6dd6a20ce60|eb6496424aa40890|2063578046||t18997.7261383091s|39b1cb57c9d02199|2693|rds|vector|||0||
+postGamma|stem|d4a297df3d4c9911|78427a3b7fd46c62|eb6496424aa40890|-963105838||t18997.7261386686s|f535cb86439abe4c|819|rds|vector|||0||
+model_diagnostics|stem|251c0487fdd7dc4f|3bc9d35da12ead78|58a4ec1e3120151b|-2086566065||t18997.7261592901s|10da61cba4cac40f|44|rds|vector|||1.76||
+plotBeta|stem|5e7a269bfdf2894a|eaded2eb6264dc54|45310854784d2d59|-1855377699||t18997.7261596406s|d34cb25d39c61bd5|652|rds|vector|||0.02||
+plotGamma|stem|88566aab075ca7b1|23bec0e4df68262c|d9becf57ccbc583f|-1751655515||t18997.726159894s|02275398ea32e5ff|655|rds|vector|||0.02||
