@@ -17,5 +17,3 @@ library(targets)
 tar_visnetwork()# This will show the workflow
 
 tar_read("Name of Target")
-
-
