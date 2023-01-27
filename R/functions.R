@@ -13,14 +13,19 @@ Pivot_data=function(jn_habitat_points){
   #convert to sites on left and species on top
   
   TOVE_points<-jn_habitat_points %>% 
-    select(RouteID, YEAR.x, PointID, ScientificName, FK_Vegetasjonstype1, FK_Vegetasjonstype2, FK_Vegetasjonstype3) %>% 
+    select(RouteID, YEAR.x, PointID, ScientificName, FK_Vegetasjonstype1#, FK_Vegetasjonstype2, FK_Vegetasjonstype3
+           ) %>% 
     mutate(YEAR=YEAR.x) %>% 
     select(!YEAR.x)
   TOVE_points_data=TOVE_points %>% 
     mutate(count=1) %>% 
-    group_by(RouteID, PointID, YEAR, ScientificName,FK_Vegetasjonstype1,FK_Vegetasjonstype2,FK_Vegetasjonstype3) %>% 
+    group_by(RouteID, PointID, YEAR, ScientificName,FK_Vegetasjonstype1
+             #,FK_Vegetasjonstype2,FK_Vegetasjonstype3
+             ) %>% 
     summarise(count=sum(count)) %>%
-    pivot_wider(id_cols=c(RouteID,PointID, YEAR,FK_Vegetasjonstype1,FK_Vegetasjonstype2,FK_Vegetasjonstype3),
+    pivot_wider(id_cols=c(RouteID,PointID, YEAR,FK_Vegetasjonstype1
+                          #,FK_Vegetasjonstype2,FK_Vegetasjonstype3
+                          ),
                 names_from=ScientificName, 
                 values_from=count,
                 values_fill = 0)  
@@ -53,8 +58,10 @@ return(ranlevels)
 
 make_covariates=function(pivot_data){
   cov = pivot_data[,4:6 ]
-  X = as.data.frame(cov[,c("FK_Vegetasjonstype1","FK_Vegetasjonstype2",
-                           "FK_Vegetasjonstype3")])
+  X = as.data.frame(cov[,c("FK_Vegetasjonstype1"
+                           #,"FK_Vegetasjonstype2",
+                           #"FK_Vegetasjonstype3"
+                           )])
   
   return(X)
 }
@@ -74,7 +81,8 @@ make_phylogeny=function(phylo){
 make_splist=function(Tr, pivot_data){
   #Traits
   Tr$Species=gsub("_", " ", Tr$Species)
-splist=Tr$Species[Tr$Species%in% colnames(pivot_data[,7:222])]
+splist=Tr$Species[Tr$Species%in% colnames(#pivot_data[,7:222])]
+  pivot_data[,7:207])]
 }
 make_Y=function(pivot_data, splist){
   pivot_data %>% 
@@ -98,7 +106,8 @@ return(Tr)
 }
 
 make_formulas=function(){
-  XFormula = ~FK_Vegetasjonstype1+FK_Vegetasjonstype2+FK_Vegetasjonstype3
+  XFormula = ~FK_Vegetasjonstype1
+  #+FK_Vegetasjonstype2+FK_Vegetasjonstype3
   TrFormula = ~Migration + 
     Mass +
     Urb +
