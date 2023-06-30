@@ -8,7 +8,9 @@ tar_option_set(packages = c("tidyverse",
                             "ape",
                             "tidyverse",
                             "readxl",
-                            "readr"))
+                            "readr",
+                            "odbc",
+                            "DBI"))
 list(
   tar_target(
     raw_data_phylo,
@@ -20,16 +22,16 @@ list(
     "data/Tronderlag/traits.csv",
     format = "file"
   ),
-  tar_target(
-    raw_data_TOVE_Points_2006_2020,
-    "data/TOVE_Points_2006_2020.xlsx",
-    format = "file"
-  ),
-  tar_target(
-    raw_data_Habitat_data_TOVE_routes,
-    "data/Tronderlag/Habitat_data_TOVE_routes2.csv",
-    format = "file"
-  ),
+  #tar_target(
+  #  raw_data_TOVE_Points_2006_2020,
+  #  "data/TOVE_Points_2006_2020.xlsx",
+  #  format = "file"
+  #),
+  #tar_target(
+  #  raw_data_Habitat_data_TOVE_routes,
+  #  "data/Tronderlag/Habitat_data_TOVE_routes2.csv",
+  #  format = "file"
+  #),
   tar_target(
     phylo,
     ape::read.tree(raw_data_phylo)
@@ -39,18 +41,16 @@ list(
     read.csv(raw_data_Tr)
   ),
   tar_target(
-    TOVE_Points_2006_2020,
-    read_excel(raw_data_TOVE_Points_2006_2020)
+    TOVE_Points,
+    download_TOVE_Points()
   ),
   tar_target(
     Habitat_data_TOVE_routes,
-    read_delim(raw_data_Habitat_data_TOVE_routes,
-               delim = ";", escape_double = FALSE, 
-               trim_ws = TRUE)
+    download_TOVE_Habitat()
   ),
   tar_target(
     jn_habitat_points,
-    joint_habitat_2_points(Habitat_data_TOVE_routes,TOVE_Points_2006_2020)
+    joint_habitat_2_points(Habitat_data_TOVE_routes, TOVE_Points)
   ),
   tar_target(
     pivot_data,
@@ -110,19 +110,19 @@ list(
   ),
   tar_target(
     postBeta,
-    getPostEstimate(mod_HMSC, parName = "Beta")
+    Hmsc::getPostEstimate(mod_HMSC, parName = "Beta")
   ),
   tar_target(
     postGamma,
-    getPostEstimate(mod_HMSC, parName="Gamma")
+    Hmsc::getPostEstimate(mod_HMSC, parName="Gamma")
   ),
   tar_target(
     plotBeta,
-    plotBeta(mod_HMSC, post = postBeta, supportLevel = 0.2)
+    Hmsc::plotBeta(mod_HMSC, post = postBeta, supportLevel = 0.2)
   ),
   tar_target(
     plotGamma,
-    plotGamma(mod_HMSC, post = postGamma, supportLevel = 0.2)
+    Hmsc::plotGamma(mod_HMSC, post = postGamma, supportLevel = 0.2)
   )
 )
 
