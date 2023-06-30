@@ -1,41 +1,44 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-check_model|function|e699b651d36f0fa0|||||||||||||||
-covariates|stem|802e7da6387e5091|a739cfe504eab55b|e93942791579b1bd|-15760148||t19384.4327263972s|bbe1f1594d75678f|10965|rds|local|vector|||0.02||
-formulas|stem|163c9c9f29eacd0b|f27e817a60d3ce1a|6376cbcccdd60dcd|348212345||t19384.4315429077s|5b4ac95fe07a1ae9|263|rds|local|vector|||2.53|package tidyverse was built under R version 4.1.3. package ggplot2 was built under R version 4.1.3. package tibble was built under R version 4.1.3. package tidyr was built under R version 4.1.3. package readr was built under R version 4.1.3. package purrr was built under R version 4.1.3. package dplyr was built under R version 4.1.3. package stringr was built under R version 4.1.3. package forcats was built under R version 4.1.3. package Hmsc was built under R version 4.1.3. package coda was built under R version 4.1.3. package corrplot was built under R version 4.1.3. package ape was built under R version 4.1.3. package readxl was built under R version 4.1.3|
-Habitat_data_TOVE_routes|stem|fc17c62e3c58504b|1547b9197c931f69|0a28b6aa22cc3682|4428685||t19384.4763635516s|e9c0222ae8805712|64594|rds|local|vector|||0.59||
-jn_habitat_points|stem|da6a3cf182bed212|d25bf3234b0b6c0f|9072e14321f039ff|-1773832383||t19384.4763923581s|5a518eaf0871e478|3180939|rds|local|vector|||0.41||
-joint_habitat_2_points|function|5b5902617d70352a|||||||||||||||
+check_model|function|191e4b4c4e94efb2|||||||||||||||
+covariates|stem|7217b4bc79006f7a|a739cfe504eab55b|111b35cd88983351|-15760148||t19538.3689498321s|32dd4af9cd531bed|9451|rds|local|vector|||0||
+download_TOVE_Habitat|function|6d10ccd8adc85a0a|||||||||||||||
+download_TOVE_Points|function|70b0cbff476716df|||||||||||||||
+formulas|stem|163c9c9f29eacd0b|f27e817a60d3ce1a|6376cbcccdd60dcd|348212345||t19536.5110369328s|76e9cd5162d27791|263|rds|local|vector|||2.53|package tidyverse was built under R version 4.1.3. package ggplot2 was built under R version 4.1.3. package tibble was built under R version 4.1.3. package tidyr was built under R version 4.1.3. package readr was built under R version 4.1.3. package purrr was built under R version 4.1.3. package dplyr was built under R version 4.1.3. package stringr was built under R version 4.1.3. package forcats was built under R version 4.1.3. package Hmsc was built under R version 4.1.3. package coda was built under R version 4.1.3. package corrplot was built under R version 4.1.3. package ape was built under R version 4.1.3. package readxl was built under R version 4.1.3|
+Habitat_data_TOVE_routes|stem|a96e5dfad4f2fe7d|b48437f1418e23b9|bec9a034983a141b|4428685||t19538.3428099534s|1a4cfbcc5f13f75c|184275|rds|local|vector|||3.54|package tidyverse was built under R version 4.2.3. package tibble was built under R version 4.2.3. package tidyr was built under R version 4.2.3. package readr was built under R version 4.2.3. package purrr was built under R version 4.2.3. package dplyr was built under R version 4.2.3. package stringr was built under R version 4.2.3. package forcats was built under R version 4.2.3. package lubridate was built under R version 4.2.3. package Hmsc was built under R version 4.2.3. package coda was built under R version 4.2.3. package corrplot was built under R version 4.2.3. package ape was built under R version 4.2.3. package readxl was built under R version 4.2.3. package odbc was built under R version 4.2.3. package DBI was built under R version 4.2.3|
+jn_habitat_points|stem|2b8cae6d9c9e1623|647ed0fbc80a76fd|b870b69421c4421c|-1773832383||t19538.3667133986s|46cdf9b552ea5a85|2158922|rds|local|vector|||0.25||
+joint_habitat_2_points|function|b12bb617c0ddd7d3|||||||||||||||
 make_covariates|function|5ce6a6cbe8029f74|||||||||||||||
 make_formulas|function|9a8bbdc008c10a58|||||||||||||||
 make_phylogeny|function|0d489e1f22ce5e07|||||||||||||||
-make_splist|function|bbd2a8638febf610|||||||||||||||
+make_splist|function|b55dad101bec98fc|||||||||||||||
 make_studyDesign|function|029f536d5c9001a9|||||||||||||||
 make_traits_df|function|90d0f34c2fa8e406|||||||||||||||
 make_variables|function|b9969d5997e5af10|||||||||||||||
-make_Y|function|4a27ca9a3857a3a9|||||||||||||||
-mod_HMSC|stem|4c6ec03f69251249|465dbc36e5fdd5a0|3d9527e51c231404|1035815180||t19384.4403832701s|bde53636995c6985|6039544|rds|local|vector|||658.89||
-model_diagnostics|stem|60c85de45e4d9920|3bc9d35da12ead78|a9a1267afee1f846|-2086566065||t19384.4403967297s|3bd8f66805fd112b|45|rds|local|vector|||1.08||
+make_Y|function|140ef71b3f0168d3|||||||||||||||
+mod_HMSC|stem|ee18ef4e1690168f|465dbc36e5fdd5a0|9859a6347494e106|1035815180||t19538.3775604079s|4e13ee6c44c4f6b3|6633746|rds|local|vector|||657.05||
+model_diagnostics|stem|15d7f6b08f6e9a66|3bc9d35da12ead78|03da9882ea0b557e|-2086566065||t19538.3914035648s|a1c456b03adbfbf8|44|rds|local|vector|||0.78||
 modelOut|function|7b2f115eb506cfb4|||||||||||||||
-modelSettings|stem|64ca292504c2ac78|ae9ad7de3c3955fa|8fb75deda0f036e8|450273915||t18997.7242042627s|18d1d8c65487954c|124|rds|local|vector|||2.84|package ape was built under R version 4.0.5|
-phylo|stem|927517d5472d1a3f|b123162cac7a8d02|d4e108c2b10b50ff|-537605442||t18997.6052773201s|c3cde3043973991a|1810|rds|local|vector|||0||
-phylo_mod|stem|6edffe2d01cc06ad|38fe10f44e575eeb|79431254d73c3786|777953723||t18997.6207030521s|0a4b867ebbc22912|1684|rds|local|vector|||2.99|package ape was built under R version 4.0.5|
-pivot_data|stem|4480fb513348389d|5bf7fe20873b8b1e|b37c21f9647d0545|1755000727||t19384.476438439s|4fa9e13c172c91b6|657189|rds|local|vector|||3.04||
-Pivot_data|function|8c14b302f30ca1f4|||||||||||||||
-plotBeta|stem|730c8e17d0d5f18b|eaded2eb6264dc54|551fe6e533c923dd|-1855377699||t19384.4403971365s|9663aa929e3671b9|650|rds|local|vector|||0.02||
-plotGamma|stem|34e2c84a8dd66a35|23bec0e4df68262c|e1c8ae86b748b728|-1751655515||t19384.440397402s|d34cb25d39c61bd5|652|rds|local|vector|||0||
-poiss_mod_str|stem|d90d580c1879b740|6e8a76bfaa94cc73|c07e8dc19b002cb6|-2069345628||t19384.4327478928s|1250c9e7ef0bc94b|600603|rds|local|vector|||0.1||
+modelSettings|stem|64ca292504c2ac78|ae9ad7de3c3955fa|8fb75deda0f036e8|450273915||t19536.5110371018s|2247cb837b5b96db|124|rds|local|vector|||2.84|package ape was built under R version 4.0.5|
+phylo|stem|927517d5472d1a3f|b123162cac7a8d02|d4e108c2b10b50ff|-537605442||t19536.5110371134s|f63deeeeb63eb297|1810|rds|local|vector|||0||
+phylo_mod|stem|6edffe2d01cc06ad|38fe10f44e575eeb|79431254d73c3786|777953723||t19536.5110371161s|4b1fb072f4afeb48|1684|rds|local|vector|||2.99|package ape was built under R version 4.0.5|
+pivot_data|stem|9b319420775d1f31|5bf7fe20873b8b1e|8762277f947eea42|1755000727||t19538.3667588036s|8ef8de86c7a62fc9|734202|rds|local|vector|||3.03||
+Pivot_data|function|4471b8aab36cf4d1|||||||||||||||
+plotBeta|stem|1844a4031b869d25|eaded2eb6264dc54|2b73894cf203ea57|-1855377699||t19538.3914042001s|5529749806a42e69|653|rds|local|vector|||0||
+plotGamma|stem|6c86ca6ded6ef20e|23bec0e4df68262c|a37d9f407307718c|-1751655515||t19538.3914038921s|e34a2795ea968550|656|rds|local|vector|||0.01||
+poiss_mod_str|stem|d54d4b9ade62cac0|6e8a76bfaa94cc73|1c3be18d00bcc81e|-2069345628||t19538.3689605397s|9e396f95158ccd2f|661657|rds|local|vector|||0.13||
 poissMod|function|8f189084b6ca6c24|||||||||||||||
-postBeta|stem|e9f158e8be132b69|6896a6dd6a20ce60|6abfaf329a1cfafa|2063578046||t19384.4403837485s|96f1b44e23f97e31|1513|rds|local|vector|||0.01||
-postGamma|stem|d2b6e0218f7de6c5|78427a3b7fd46c62|6abfaf329a1cfafa|-963105838||t19384.440384028s|078fc2649bd32bbc|525|rds|local|vector|||0||
+postBeta|stem|9029c83c95094f06|6896a6dd6a20ce60|357dcdc80fbc15b1|2063578046||t19538.3913943646s|4a54019af9c1505e|1534|rds|local|vector|||0||
+postGamma|stem|8c51d6b1c506a4d6|78427a3b7fd46c62|357dcdc80fbc15b1|-963105838||t19538.391394092s|54dc36f9f45e0a54|513|rds|local|vector|||0||
 raw_data_Habitat_data_TOVE_routes|stem|5ab6c36d3d9530d3|786fe2ae41db082d|ef46db3751d8e999|409146115|data/Tronderlag/Habitat_data_TOVE_routes2.csv|t19384.4760177415s|b584e9c2f889efe9|1064255|file|local|vector|||4.93|package tidyverse was built under R version 4.1.3. package ggplot2 was built under R version 4.1.3. package tibble was built under R version 4.1.3. package tidyr was built under R version 4.1.3. package readr was built under R version 4.1.3. package purrr was built under R version 4.1.3. package dplyr was built under R version 4.1.3. package stringr was built under R version 4.1.3. package forcats was built under R version 4.1.3. package Hmsc was built under R version 4.1.3. package coda was built under R version 4.1.3. package corrplot was built under R version 4.1.3. package ape was built under R version 4.1.3. package readxl was built under R version 4.1.3|
-raw_data_phylo|stem|c0f75c94463720ba|cbb1b3775a4a0dca|ef46db3751d8e999|1445508717|data/Tronderlag/Ctree (1).tre|t18932.89348612s|d6a257f838f6b900|2380|file|local|vector|||4.01|package ape was built under R version 4.0.5|
+raw_data_phylo|stem|c0f75c94463720ba|cbb1b3775a4a0dca|ef46db3751d8e999|1445508717|data/Tronderlag/Ctree (1).tre|t19536.511039254s|218704c2223f2da0|2380|file|local|vector|||4.01|package ape was built under R version 4.0.5|
 raw_data_TOVE_Points_2006_2020|stem|639fe5e016aff003|93e65517bb5d3841|ef46db3751d8e999|-530637044|data/TOVE_Points_2006_2020.xlsx|t18918.3263684328s|9932a1773b65cc09|14994666|file|local|vector|||0||
-raw_data_Tr|stem|dafacc4985191487|9ff6c8284d471a77|ef46db3751d8e999|-1125718472|data/Tronderlag/traits.csv|t18932.8932040398s|455780fb343ba4fe|2381|file|local|vector|||0||
+raw_data_Tr|stem|dafacc4985191487|9ff6c8284d471a77|ef46db3751d8e999|-1125718472|data/Tronderlag/traits.csv|t19536.5110394799s|7d544c3d50531500|2381|file|local|vector|||0||
 run_HMSC|function|3ee1485040875e6d|||||||||||||||
-splist|stem|f9593e81ecba8eb5|2cfe562eaa5c361d|210d81be02533e28|870028807||t19384.4327261038s|06a752a2a65c9ce1|551|rds|local|vector|||0||
-studyDesign|stem|ebbb965920a66b3b|75e7cf65c6353230|14c32eea6c52b216|-642737190||t19384.4327288479s|4dfa8225a5031d0b|19009|rds|local|vector|||0.19||
+splist|stem|8c0eec40d866af95|2cfe562eaa5c361d|eac2ec9933650975|870028807||t19538.3667591685s|d29875c59aebc51d|560|rds|local|vector|||0||
+studyDesign|stem|befb28db4511389b|75e7cf65c6353230|b218450200d9cef2|-642737190||t19538.3689494307s|01429e80e5024a0e|20382|rds|local|vector|||0.03||
+TOVE_Points|stem|45c22b2a76ba7139|e7fba02d2a32e126|3c7898078354493a|1091359317||t19538.3662008239s|f5fb384b2c25c6bf|1345728|rds|local|vector|||35.19|package tidyverse was built under R version 4.2.3. package tibble was built under R version 4.2.3. package tidyr was built under R version 4.2.3. package readr was built under R version 4.2.3. package purrr was built under R version 4.2.3. package dplyr was built under R version 4.2.3. package stringr was built under R version 4.2.3. package forcats was built under R version 4.2.3. package lubridate was built under R version 4.2.3. package Hmsc was built under R version 4.2.3. package coda was built under R version 4.2.3. package corrplot was built under R version 4.2.3. package ape was built under R version 4.2.3. package readxl was built under R version 4.2.3. package odbc was built under R version 4.2.3. package DBI was built under R version 4.2.3|
 TOVE_Points_2006_2020|stem|6be79b5e8662c080|0d12f10d12e36a7b|e855ac6623d334ab|-730863813||t18997.605320434s|8bc1ae6fdf30053f|1646485|rds|local|vector|||3.11||
-Tr|stem|d0c239e44941c332|e2b34ee0b4a510cd|f2d33fb8c14ab778|1634886712||t18997.6053206649s|10eef3e6f9b9b0b7|1229|rds|local|vector|||0||
-trait_mod|stem|6ba447609484823b|998166431f0ce203|1aa20637a4fd8436|-1002112680||t19384.4327408739s|147da63c33595320|1120|rds|local|vector|||0.03||
-variableStr|stem|27d1e8af8e4e8a82|48990834236cfeae|377eb5a19e57cebb|-1716667730||t19384.4327403738s|4a72b8316dae4398|19687|rds|local|vector|||0||
-Y_obs|stem|65e0ce2e645316e8|b0da9b2563afbccf|a42117474fee50cb|57341179||t19384.432739993s|9b6d2a8d12cd591c|419061|rds|local|vector|||0.53|1m22mUsing an external vector in selections was deprecated in tidyselect 1.1.0.36mi39m Please use all_of or any_of instead.   Was  data  selectsplist   Now  data  selectall_ofsplistSee httpstidyselect.rlib.orgreferencefaqexternalvector.html.|
+Tr|stem|d0c239e44941c332|e2b34ee0b4a510cd|f2d33fb8c14ab778|1634886712||t19536.5110372744s|88eeeee5fa9a57d3|1229|rds|local|vector|||0||
+trait_mod|stem|73c9c99ff2451a32|998166431f0ce203|92cabffb66f94d4e|-1002112680||t19538.3684721283s|8b534963f5486e20|1135|rds|local|vector|||0||
+variableStr|stem|8fe8d5b9c6c3ce29|48990834236cfeae|a4e53052563f6d6c|-1716667730||t19538.3478110361s|189f259ec5d1724b|21060|rds|local|vector|||0||
+Y_obs|stem|88def2307dd5df44|b0da9b2563afbccf|44fc235560a13f4a|57341179||t19538.3683256148s|b527f35069707f6c|498465|rds|local|vector|||0.33|1m22mUsing an external vector in selections was deprecated in tidyselect 1.1.0.36mℹ39m Please use all_of or any_of instead.   Was  data  selectsplist   Now  data  selectall_ofsplistSee httpstidyselect.rlib.orgreferencefaqexternalvector.html.|
