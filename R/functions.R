@@ -172,13 +172,17 @@ run_HMSC =function(poiss_mod_str, modelSettings){
 }
 
 check_model=function(mod_HMSC){
+  
   ## Convergence tests
-  mcoda <- convertToCodaObject(mod_HMSC)
-  par(mar = rep(2, 4))
-  #Visual chain tests for different coefficients of interest 
-  plot(mcoda$Beta)
+  mcoda <- Hmsc::convertToCodaObject(mod_HMSC)
+
+  #Plot MCMC chains and posterior densities for different coefficients of interest 
+  MCMCvis::MCMCtrace(mcoda$Beta, filename = "Traces_Beta.pdf")
+  MCMCvis::MCMCtrace(mcoda$Gamma, filename = "Traces_Gamma.pdf")
+  
+  pdf("Traces_Rho.pdf", width = 8, height = 4)
   plot(mcoda$Rho)
-  plot(mcoda$Gamma)
+  dev.off()
 }
 
 modelOut=function(mod_HMSC){
