@@ -1,25 +1,57 @@
 # functions.R
 
-joint_habitat_2_points=function(Habitat_data_TOVE_routes,TOVE_Points_2006_2020){
-  Habitat_data_TOVE_routes$YEAR=as.numeric(Habitat_data_TOVE_routes$Aar)
-  Habitat_data_TOVE_routes$PointID=as.numeric(Habitat_data_TOVE_routes$PktNr)
-  Habitat_data_TOVE_routes$RouteID=as.numeric(Habitat_data_TOVE_routes$RuteNr)
-  TOVE_Points_2006_2020=TOVE_Points_2006_2020 %>% 
+
+## Download point census data from database
+download_TOVE_Points <- function(){
+  
+  con <- DBI::dbConnect(odbc(),
+                        Driver   = "SQL server", 
+                        Server   = "ninsql07.nina.no",
+                        Database = "TOVTaksering",
+                        Trusted_Connection = "True")
+  
+  TOVE_Points <- tbl(con, 'Punkttaksering_Verifisert') %>%
+    as_tibble() %>%
+    dplyr::mutate(ScientificName = str_trim(ScientificName),
+                  Count = `Obs<50m` + `Obs>50m` + `ObsFlokk`)
+  
+  return(TOVE_Points)
+}
+
+## Download habitat and metadata on census points from database
+download_TOVE_Habitat <- function(){
+  
+  con <- DBI::dbConnect(odbc(),
+                        Driver   = "SQL server", 
+                        Server   = "ninsql07.nina.no",
+                        Database = "TOVTaksering",
+                        Trusted_Connection = "True")
+  
+  Habitat_data_TOVE_routes <- tbl(con, 'TakseringspunktInfo') %>%
+    as_tibble() %>%
+    dplyr::rename(PointID = PktID,
+                  RouteID = RuteID)
+  
+  return(Habitat_data_TOVE_routes)
+}
+
+
+joint_habitat_2_points=function(Habitat_data_TOVE_routes,TOVE_Points){
+  
+  TOVE_Points <- TOVE_Points %>% 
     left_join(.,Habitat_data_TOVE_routes, by=c("RouteID"="RouteID", "PointID"="PointID"))
   
+  return(TOVE_Points)
 }
 
 Pivot_data=function(jn_habitat_points){
   #convert to sites on left and species on top
   
-  TOVE_points<-jn_habitat_points %>% 
-    select(RouteID, YEAR.x, PointID, ScientificName, FK_Vegetasjonstype1#, FK_Vegetasjonstype2, FK_Vegetasjonstype3
-           ) %>% 
-    mutate(YEAR=YEAR.x) %>% 
-    select(!YEAR.x)
-  TOVE_points_data=TOVE_points %>% 
+  TOVE_points_data <- jn_habitat_points %>% 
+    select(RouteID, YEAR, PointID, ScientificName, FK_Vegetasjonstype1#, FK_Vegetasjonstype2, FK_Vegetasjonstype3
+    ) %>% 
     mutate(count=1) %>% 
-    group_by(RouteID, PointID, YEAR, ScientificName,FK_Vegetasjonstype1
+    group_by(RouteID, PointID, YEAR, ScientificName, FK_Vegetasjonstype1
              #,FK_Vegetasjonstype2,FK_Vegetasjonstype3
              ) %>% 
     summarise(count=sum(count)) %>%
@@ -30,8 +62,7 @@ Pivot_data=function(jn_habitat_points){
                 values_from=count,
                 values_fill = 0)  
   
-  TOVE_points_data_na=
-    TOVE_points_data %>% 
+  TOVE_points_data_na <- TOVE_points_data %>% 
     drop_na()
   
   return(TOVE_points_data_na)
@@ -81,19 +112,17 @@ make_phylogeny=function(phylo){
 make_splist=function(Tr, pivot_data){
   #Traits
   Tr$Species=gsub("_", " ", Tr$Species)
-splist=Tr$Species[Tr$Species%in% colnames(#pivot_data[,7:222])]
-  pivot_data[,7:207])]
+  splist=Tr$Species[Tr$Species%in% colnames(pivot_data)]
 }
 make_Y=function(pivot_data, splist){
-  pivot_data %>% 
+  Y2 <- pivot_data %>% 
     ungroup() %>% 
     select(splist)->Y2
   Y = as.matrix(Y2) 
-  Y=Y[,order(colnames(Y))]
+  Y = Y[,order(colnames(Y))]
   Y.pa = Y
-  Y.pa[Y>1] = 1
-  return(list(Y,
-              Y.pa))
+  Y.pa[Y > 1] = 1
+  return(list(Y, Y.pa))
 }
 make_traits_df=function(Tr, Y_obs){
 Tr=Tr %>% 
@@ -143,13 +172,17 @@ run_HMSC =function(poiss_mod_str, modelSettings){
 }
 
 check_model=function(mod_HMSC){
+  
   ## Convergence tests
-  mcoda <- convertToCodaObject(mod_HMSC)
-  par(mar = rep(2, 4))
-  #Visual chain tests for different coefficients of interest 
-  plot(mcoda$Beta)
+  mcoda <- Hmsc::convertToCodaObject(mod_HMSC)
+
+  #Plot MCMC chains and posterior densities for different coefficients of interest 
+  MCMCvis::MCMCtrace(mcoda$Beta, filename = "Traces_Beta.pdf")
+  MCMCvis::MCMCtrace(mcoda$Gamma, filename = "Traces_Gamma.pdf")
+  
+  pdf("Traces_Rho.pdf", width = 8, height = 4)
   plot(mcoda$Rho)
-  plot(mcoda$Gamma)
+  dev.off()
 }
 
 modelOut=function(mod_HMSC){
